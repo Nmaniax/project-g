@@ -258,7 +258,18 @@ footer {
     .header{
         height: 320px;
     }
-    /*ul:not(:first-child) {display: none;}*/
+    
+    .sign-up {
+        background-image: none;
+        background-color: var(--background-color);
+    }
+
+    .feature-3 {
+        background-image: linear-gradient(
+            var(--background-color),var(--background-color-b)
+        );
+    }
+
     ul {
         flex-direction: column;
         align-self: baseline;
@@ -305,6 +316,18 @@ footer {
 
     .container {
         width: 100%;
+    }
+
+    .sign-up {
+        background-image: none;
+        background-color: var(--background-color);
+    }
+
+    .feature-2,
+    .feature-3 { 
+        background-image: linear-gradient(
+            var(--background-color),var(--background-color-b)
+        );
     }
 
     nav.menu {
