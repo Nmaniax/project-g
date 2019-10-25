@@ -1,0 +1,394 @@
+
+/* Variable settings */
+:root {
+    --primary-color: #151A2D;
+    --secundary-color: #27282B;
+    --background-color: #6C0909;
+    --background-color-b: rgb(43, 4, 11);
+    --active-color: #39A2AE;
+}
+/* General settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* Add all the page in flex display */
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 3;
+}
+
+/* Each section style */
+.section {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Top navigation bar styles */
+nav.menu{
+    height: 70px;
+    position: fixed;
+    padding-left: 5px;
+    z-index: 1;
+}
+/* Side navigation style */
+nav.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+/* Style the links inside the navigation bars */
+nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'helvetica neue', sans-serif ;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+    background-color: #ddd;
+    color: white;
+}
+
+/* Active class to highlight */
+nav a.active {
+    background-color: #39A2AE;
+    color: white;
+    float: left;
+}
+
+/* Icon is the button for opening and closing side nav*/
+nav .icon {
+    display: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    align-self: flex-start;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'helvetica neue', sans-serif ;
+}
+
+ /* Side nav close button 
+    it was needed for always displaying in case the side-nav 
+    appeared in desktop size */
+#icon-close {
+    background-color: var(--primary-color);
+    color: white;
+    display: block;
+    align-self: flex-start;
+    font-size: 25px;
+}
+
+/* Nav list container style */
+nav ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Sidenav specific list cointainer style */
+.sidenav ul {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-self: baseline;
+    padding-top: 3px;
+}
+
+/* list element inside nav */
+nav ul li {
+    padding: 5px;
+}
+
+/* link item inside list inside a navbar */
+nav ul li a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
+/*--- Columns ---*/
+
+.aside {
+    width: 8%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        var(--secundary-color), var(--primary-color)
+    );
+}
+
+/* added a footer for more references */
+footer {
+    flex-shrink: 0;
+    display: flex;
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header section of the page */
+.header {
+    /*background-color: #B2D6FF;*/
+    background-image: linear-gradient(
+        rgb(43, 4, 11), var(--background-color)
+    );
+}
+
+/* Slide show for images */
+.header .slideshow-container {
+    display: flex;
+    max-width: 500px;
+    max-height: 200px;
+    position: relative;
+    margin: auto;
+    background-color: #07020D;
+    height: 200px;
+
+}
+
+.header figure img {
+    width: 50%;
+    /*display: none;*/
+}
+
+.header figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+/* fading animation for the images */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .3;}
+    to {opacity: 1;}
+}
+
+@keyframes fade {
+    from {opacity: .3;}
+    to {opacity: 1;}
+}
+
+/*content section*/
+.content {
+    background-color: #EAEDF0;
+}
+
+/*--- more sections ---*/
+.sign-up {
+    /*background-color: var(--active-color);*/
+
+    background-image: linear-gradient(
+        var(--background-color),var(--background-color-b)
+    );
+}
+
+.feature-1 {
+    background-color: var(--background-color);
+}
+
+.feature-2 {
+    background-color: var(--background-color);
+}
+
+.feature-3 {
+    background-color: var(--background-color);
+}
+
+
+/* ----Some variable clases just to apply DRY---- */
+
+.background-navbar {
+    /*background-color: #6C0909;
+    
+    background-color: #27282B;*/
+    background-image: linear-gradient(
+        var(--primary-color), var(--secundary-color)
+    );
+    color: white;
+}
+
+/* ----Mobile Styles----- */
+@media only screen and (max-width:400px){
+    
+    .header{
+        height: 320px;
+    }
+    /*ul:not(:first-child) {display: none;}*/
+    ul {
+        flex-direction: column;
+        align-self: baseline;
+        padding: 0;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    li a {
+        display: block;
+    }
+    nav.menu {
+        justify-content: left;
+        padding-left: 0;
+    }
+    nav .icon {
+        display: block;
+    }
+    nav.sidenav {padding-top: 0;}
+    nav.sidenav a {font-size: 18px;}
+    nav.responsive li{
+        display: none;
+    }
+    body{
+        background-color: #F09A9D;
+    }
+}
+
+/* ---Tablet styles---- */
+
+@media only screen and (min-width: 401px) and (max-width: 960px){
+    .sign-up,
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 50%;
+    }
+
+    .header{
+        height: 400px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    nav.menu {
+        justify-content: left;
+        padding-left: 0;
+    }
+    ul {
+        flex-direction: column;
+        align-self: baseline;
+        padding: 0;
+    }
+    li {
+        margin: 0;
+    }
+
+    li a {
+        display: block;
+    }
+    nav .icon {
+        display: block;
+    }
+
+    nav.sidenav {padding-top: 0;}
+    nav.sidenav a {font-size: 18px;}
+
+    nav.responsive li {
+        display: none;
+        transition: all 5s;
+    }
+
+    body {
+        background-color: #F5CF8E;
+    }
+}
+
+/* ---Desktop Styles--- */
+
+@media only screen and (min-width: 961px){
+    
+    .page {
+        margin: auto;
+    }
+    .column-1 {
+        order: 1
+    }
+    .container {
+        order: 2;
+        width: 50%;
+    }
+    .column-2 {
+        order: 3;
+    }
+
+    footer {
+        order: 4;
+    }
+
+    .aside{
+        display: flex;
+    }
+
+    nav.sidenav {width: 0;}
+
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 33.33%;
+    }
+    
+    .header{
+        height: 400px;
+    }
+
+    .sign-up {
+        height: 200px;
+        order: 1;
+    }
+    
+    .content {
+        order: 2;
+    }
+
+
+    body {
+        background-color: #B2D6FF;
+    }
+}
