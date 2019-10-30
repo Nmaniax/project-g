@@ -1,17 +1,24 @@
 
 /* Variable settings */
 :root {
-    --primary-color: #151A2D;
-    --secundary-color: #27282B;
-    --background-color: #6C0909;
-    --background-color-b: rgb(43, 4, 11);
-    --active-color: #39A2AE;
+    --primary-color: #4082A2;
+    --secundary-color: #0E2943;
+    --background-color: #C67804;
+    --background-color-b: #944506;
+    --active-color: #CAD7D7;
 }
 /* General settings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: 0;
+}
+
+/* Page background */
+body {
+    background-image: linear-gradient(
+    var(--background-color-b), var(--background-color), var(--background-color), var(--background-color-b)
+);
 }
 
 /* Add all the page in flex display */
@@ -32,6 +39,52 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Overlay styles */
+.overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay .announcement{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay img {
+    width: 50%;
+    height: 50%;
+}
+
+.overlay .over-close {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    left: 25px;
+    font-size: 40px;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
 /* Top navigation bar styles */
@@ -65,14 +118,10 @@ nav a {
 }
 
 /* Change the color of links on hover */
-nav a:hover {
-    background-color: #ddd;
-    color: white;
-}
 
 /* Active class to highlight */
 nav a.active {
-    background-color: #39A2AE;
+    background-color: var(--active-color);
     color: white;
     float: left;
 }
@@ -89,14 +138,14 @@ nav .icon {
     text-decoration: none;
     font-size: 25px;
     font-family: 'helvetica neue', sans-serif ;
+    background-color: transparent;
+    color: #bfdaec;
 }
 
  /* Side nav close button 
     it was needed for always displaying in case the side-nav 
     appeared in desktop size */
 #icon-close {
-    background-color: var(--primary-color);
-    color: white;
     display: block;
     align-self: flex-start;
     font-size: 25px;
@@ -133,7 +182,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ddd;
+    background-color: #84bbee;
 }
 
 /*--- Columns ---*/
@@ -162,26 +211,27 @@ footer {
 
 /* Header section of the page */
 .header {
-    /*background-color: #B2D6FF;*/
-    background-image: linear-gradient(
-        rgb(43, 4, 11), var(--background-color)
-    );
+    background-color: transparent;
+    /*background-image: linear-gradient(
+        var(--background-color-b), var(--background-color)
+    );*/
 }
 
 /* Slide show for images */
 .header .slideshow-container {
     display: flex;
     max-width: 500px;
-    max-height: 200px;
+    max-height: 300px;
     position: relative;
     margin: auto;
     background-color: #07020D;
-    height: 200px;
+    height: 240px;
 
 }
 
 .header figure img {
-    width: 50%;
+    width: 80%;
+    height: 100%;
     /*display: none;*/
 }
 
@@ -220,23 +270,23 @@ footer {
 
 /*--- more sections ---*/
 .sign-up {
-    /*background-color: var(--active-color);*/
-
+    background-color: transparent;
+/*
     background-image: linear-gradient(
         var(--background-color),var(--background-color-b)
-    );
+    );*/
 }
 
 .feature-1 {
-    background-color: var(--background-color);
+    background-color: transparent;
 }
 
 .feature-2 {
-    background-color: var(--background-color);
+    background-color: transparent;
 }
 
 .feature-3 {
-    background-color: var(--background-color);
+    background-color: transparent;
 }
 
 
@@ -255,10 +305,17 @@ footer {
 /* ----Mobile Styles----- */
 @media only screen and (max-width:400px){
     
+    .overlay .announcement{ font-size: 20px}
+    .overlay .over-close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
     .header{
         height: 320px;
     }
-    
+    /*
     .sign-up {
         background-image: none;
         background-color: var(--background-color);
@@ -268,7 +325,7 @@ footer {
         background-image: linear-gradient(
             var(--background-color),var(--background-color-b)
         );
-    }
+    }*/
 
     ul {
         flex-direction: column;
@@ -295,9 +352,6 @@ footer {
     nav.responsive li{
         display: none;
     }
-    body{
-        background-color: #F09A9D;
-    }
 }
 
 /* ---Tablet styles---- */
@@ -317,7 +371,7 @@ footer {
     .container {
         width: 100%;
     }
-
+    /*
     .sign-up {
         background-image: none;
         background-color: var(--background-color);
@@ -328,7 +382,7 @@ footer {
         background-image: linear-gradient(
             var(--background-color),var(--background-color-b)
         );
-    }
+    }*/
 
     nav.menu {
         justify-content: left;
@@ -356,10 +410,6 @@ footer {
     nav.responsive li {
         display: none;
         transition: all 5s;
-    }
-
-    body {
-        background-color: #F5CF8E;
     }
 }
 
@@ -410,8 +460,4 @@ footer {
         order: 2;
     }
 
-
-    body {
-        background-color: #B2D6FF;
-    }
 }

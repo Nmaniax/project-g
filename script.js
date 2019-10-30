@@ -3,13 +3,19 @@
 const icon = document.querySelector(".icon");
 const iconClose = document.querySelector('#icon-close');
 const menu = document.querySelector('.sidenav');
+const overlayButton = document.querySelector('.over-close');
+const page = document.querySelector("body");
 let responsiveFlag = false;
 var slideIndex = 0;
 //console.log(menu);
 
+//document.addEventListener('onload', showAnnouncement);
+window.onload = showAnnouncement;
 showSlides();
 icon.addEventListener('click', controlSidebar);
 iconClose.addEventListener('click', controlSidebar);
+overlayButton.addEventListener('click', closeAnnouncement);
+
 
 function menuDisplay(){
     menu.classList.toggle('responsive');
@@ -46,4 +52,19 @@ function showSlides() {
     }
     slides[slideIndex - 1].style.display = 'block';
     setTimeout(showSlides, 2000); //change image every 2 seconds 
+}
+
+function showAnnouncement(){
+    var overlay = document.querySelector(".overlay");
+    var bar = document.querySelector("nav.menu");
+    overlay.style.display = "block";
+    bar.style.zIndex = 0;
+    console.log("showed");
+}
+
+function closeAnnouncement(){
+    var overlay = document.querySelector(".overlay");
+    var bar = document.querySelector("nav.menu");
+    bar.style.zIndex = 1;
+    overlay.style.display = "none";
 }
