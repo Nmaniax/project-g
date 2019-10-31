@@ -12,28 +12,46 @@
     </head>
     <body>
         <section class='page'>
-            <nav class='section menu responsive'> 
-                <ul>
+            <nav class='section menu background-navbar responsive'> 
+                <ul class="background-navbar">
                     <button class='icon'>&#9776</button>
-                    <li><a href="#header" class="active">Header</a></li>
-                    <li><a href="#content">Content</a></li>
+                    <li><a href="./index.html" class="active">Home</a></li>
+                    <!--<li><a href="./about.html">About</a></li>-->
                     <li><a href="#sign-up">Sign-up</a></li>
                     <li><a href="#feature-1">feature-1</a></li>
                 </ul>
             </nav>
-            
-            <section class="page container">
+
+            <!--Side nav section-->
+            <nav class='sidenav background-navbar'>
+                <ul class="">
+                    <button class='icon' id='icon-close'>✖</button>
+                    <li><a href="./index.html" class="active">Home</a></li>
+                    <!--<li><a href="./about.html">About</a></li>-->
+                    <li><a href="#sign-up">Sign-up</a></li>
+                    <li><a href="#feature-1">feature-1</a></li>
+                </ul>
+            </nav>
+
+            <!-- Columns that can be used for ads or more banners -->
+            <section class="aside column-1"></section>
+            <section class="aside column-2"></section>
+
+            <!-- Cointaner -->
+            <section class="container contact">
                 <header class='section header'>
-                    <img src="images/header.svg"/>
+                    <figure>
+                        <img class="join-banner" src="http://socieux.eu/wp-content/uploads/2017/10/JoinUs_v1.png" alt="join"/>
+                    </figure>
                 </header>
-                <section class='section content' id="content">
+                <!--<section class='section content' id="content">
                     <img src="images/content.svg"/>
-                </section>
+                </section>-->
                 <section class="section sign-up" id="sign-up">
                     <img src='images/sign-up.svg'/>
                 </section>
                 <article class='section feature-1'>
-                    <img src='images/feature.svg'/>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.4077266851223!2d-102.7610335496932!3d20.81523580034159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429262d4fba0767%3A0x720bd578cfe24437!2sPlaza%20de%20Armas!5e0!3m2!1sen!2smx!4v1572547601955!5m2!1sen!2smx" frameborder="0" allowfullscreen="" SameSite=None></iframe>
                 </article>
                 <article class='section feature-2'>
                     <img src='images/feature.svg'/>
@@ -41,9 +59,13 @@
                 <article class="section feature-3">
                     <img src='images/feature.svg'/>
                 </article>
-            </sectio>
+            </section>
+                
+            <footer>
+                <p>2019 Xavier</p>
+            </footer>
         </section>
 
-        <script src="script.js"></script>
+        <script src="script-contact.js"></script>
     </body>
 </html>

@@ -10,7 +10,7 @@ var slideIndex = 0;
 //console.log(menu);
 
 //document.addEventListener('onload', showAnnouncement);
-window.onload = showAnnouncement;
+window.onload = setTimeout(showAnnouncement,2000);
 showSlides();
 icon.addEventListener('click', controlSidebar);
 iconClose.addEventListener('click', controlSidebar);
@@ -59,8 +59,10 @@ function showAnnouncement(){
     var bar = document.querySelector("nav.menu");
     overlay.style.display = "block";
     bar.style.zIndex = 0;
+    setTimeout(() => {overlay.style.opacity = 1}, 10);
     console.log("showed");
 }
+
 
 function closeAnnouncement(){
     var overlay = document.querySelector(".overlay");

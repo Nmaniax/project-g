@@ -30,6 +30,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex: 3;
+    padding-top: 70px;
 }
 
 /* Each section style */
@@ -50,7 +51,8 @@ body {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
-    transition: 0.5s;
+    opacity: 0.1;
+    transition: 1s;
 }
 
 .overlay .announcement{
@@ -59,7 +61,7 @@ body {
     font-size: 36px;
     color: white;
     display: block;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .overlay img {
@@ -220,19 +222,18 @@ footer {
 /* Slide show for images */
 .header .slideshow-container {
     display: flex;
-    max-width: 500px;
-    max-height: 300px;
+    max-width: 700px;
+    max-height: 500px;
     position: relative;
     margin: auto;
     background-color: #07020D;
-    height: 240px;
+    height: 390px;
 
 }
 
 .header figure img {
     width: 80%;
     height: 100%;
-    /*display: none;*/
 }
 
 .header figure{
@@ -243,6 +244,11 @@ footer {
     overflow: hidden;
     width: 100%;
     margin: 0;
+}
+
+.header .join-banner {
+    width: 80%;
+    height: 100%;
 }
 
 /* fading animation for the images */
@@ -280,7 +286,11 @@ footer {
 .feature-1 {
     background-color: transparent;
 }
-
+.contact .feature-1 iframe {
+    width: 400px;
+    height: 300px;
+    border: 10px solid black;
+}
 .feature-2 {
     background-color: transparent;
 }
@@ -314,6 +324,10 @@ footer {
 
     .header{
         height: 320px;
+    }
+
+    .header .slideshow-container {
+        height: 260px;
     }
     /*
     .sign-up {
@@ -371,18 +385,6 @@ footer {
     .container {
         width: 100%;
     }
-    /*
-    .sign-up {
-        background-image: none;
-        background-color: var(--background-color);
-    }
-
-    .feature-2,
-    .feature-3 { 
-        background-image: linear-gradient(
-            var(--background-color),var(--background-color-b)
-        );
-    }*/
 
     nav.menu {
         justify-content: left;
@@ -410,6 +412,10 @@ footer {
     nav.responsive li {
         display: none;
         transition: all 5s;
+    }
+
+    .contact .sign-up{
+        order: 1;
     }
 }
 
@@ -459,5 +465,20 @@ footer {
     .content {
         order: 2;
     }
+    
+    .contact .header {
+        height: 200px;
+    }
 
+    .contact .sign-up,
+    .contact .feature-1,
+    .contact .feature-2,
+    .contact .feature-3 {
+        height: 400px;
+        width: 50%;
+    }
+
+    .contact .sign-up {
+        width: 35%;
+    }
 }
