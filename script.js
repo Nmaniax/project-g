@@ -58,7 +58,7 @@ function showAnnouncement(){
     var overlay = document.querySelector(".overlay");
     var bar = document.querySelector("nav.menu");
     overlay.style.display = "block";
-    bar.style.zIndex = 0;
+    bar.style.zIndex = 1;
     setTimeout(() => {overlay.style.opacity = 1}, 10);
     console.log("showed");
 }

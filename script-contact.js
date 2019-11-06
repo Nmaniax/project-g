@@ -7,6 +7,7 @@ let responsiveFlag = false;
 var slideIndex = 0;
 //console.log(menu);
 
+document.cookie = "SameSite=Strict; Secure";
 icon.addEventListener('click', controlSidebar);
 iconClose.addEventListener('click', controlSidebar);
 
