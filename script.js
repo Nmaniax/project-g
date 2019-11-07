@@ -5,6 +5,9 @@ const iconClose = document.querySelector('#icon-close');
 const menu = document.querySelector('.sidenav');
 const overlayButton = document.querySelector('.over-close');
 const page = document.querySelector("body");
+const btnFeature1 = document.querySelector("#btnFeature-1");
+const btnFeature2 = document.querySelector("#btnFeature-2");
+const btnSignup = document.querySelector("#btnSignup");
 let responsiveFlag = false;
 var slideIndex = 0;
 //console.log(menu);
@@ -15,7 +18,17 @@ showSlides();
 icon.addEventListener('click', controlSidebar);
 iconClose.addEventListener('click', controlSidebar);
 overlayButton.addEventListener('click', closeAnnouncement);
+btnFeature1.addEventListener('click', function () {goToFeature('#feature-1')});
+btnFeature2.addEventListener('click', function () {goToFeature('#feature-2')});
+btnSignup.addEventListener('click', function () {goToFeature('#sign-up')});
 
+function goToFeature(arg) {
+    console.log("arg");
+    document.querySelector(arg).scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
+}
 
 function menuDisplay(){
     menu.classList.toggle('responsive');
@@ -57,8 +70,8 @@ function showSlides() {
 function showAnnouncement(){
     var overlay = document.querySelector(".overlay");
     var bar = document.querySelector("nav.menu");
-    overlay.style.display = "block";
-    bar.style.zIndex = 1;
+    overlay.classList.add('display');
+    /*overlay.style.display = "block";*/
     setTimeout(() => {overlay.style.opacity = 1}, 10);
     console.log("showed");
 }
@@ -67,6 +80,6 @@ function showAnnouncement(){
 function closeAnnouncement(){
     var overlay = document.querySelector(".overlay");
     var bar = document.querySelector("nav.menu");
-    bar.style.zIndex = 1;
-    overlay.style.display = "none";
+    //overlay.style.display = "none";
+    overlay.classList.remove('display');
 }

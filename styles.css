@@ -13,12 +13,12 @@
     padding: 0;
     box-sizing: 0;
 }
-
 /* Page background */
 body {
     background-image: linear-gradient(
-    var(--background-color-b), var(--background-color), var(--background-color), var(--background-color-b)
-);
+    var(--background-color-b), var(--background-color), var(--background-color), var(--background-color-b)   
+    );
+    background-attachment: fixed;
 }
 
 /* Add all the page in flex display */
@@ -52,7 +52,8 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     opacity: 0.1;
-    transition: 1s;
+    transition-property: opacity, display;
+    transition-duration: 2s, 1s;
 }
 
 .overlay .announcement{
@@ -89,6 +90,10 @@ body {
     margin-top: 30px;
 }
 
+.overlay.display {
+    display: block;
+}
+
 /* Top navigation bar styles */
 nav.menu{
     height: 70px;
@@ -96,6 +101,7 @@ nav.menu{
     padding-left: 5px;
     z-index: 1;
 }
+
 /* Side navigation style */
 nav.sidenav {
     height: 100%;
@@ -117,6 +123,19 @@ nav a {
     text-decoration: none;
     font-size: 17px;
     font-family: 'helvetica neue', sans-serif ;
+}
+nav button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'helvetica neue', sans-serif ;
+    background-color: transparent;
 }
 
 /* Change the color of links on hover */
@@ -177,13 +196,15 @@ nav ul li {
 }
 
 /* link item inside list inside a navbar */
-nav ul li a {
+nav ul li a,
+nav ul li button {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li button:hover {
     background-color: #84bbee;
 }
 
@@ -360,7 +381,7 @@ footer {
         margin: 0;
     }
 
-    li a {
+    li a, li button {
         display: block;
     }
     nav.menu {
@@ -371,7 +392,7 @@ footer {
         display: block;
     }
     nav.sidenav {padding-top: 0;}
-    nav.sidenav a {font-size: 18px;}
+    nav.sidenav a, nav.sidenav button {font-size: 18px;}
     nav.responsive li{
         display: none;
     }
@@ -410,7 +431,7 @@ footer {
         margin: 0;
     }
 
-    li a {
+    li a, li button {
         display: block;
     }
     nav .icon {
@@ -418,7 +439,7 @@ footer {
     }
 
     nav.sidenav {padding-top: 0;}
-    nav.sidenav a {font-size: 18px;}
+    nav.sidenav a, nav.sidenav button {font-size: 18px;}
 
     nav.responsive li {
         display: none;
