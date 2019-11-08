@@ -8,6 +8,9 @@ const page = document.querySelector("body");
 const btnFeature1 = document.querySelector("#btnFeature-1");
 const btnFeature2 = document.querySelector("#btnFeature-2");
 const btnSignup = document.querySelector("#btnSignup");
+const btnSideFeature1 = document.querySelector("#btnSideFeature-1");
+const btnSideFeature2 = document.querySelector("#btnSideFeature-2");
+const btnSideSignup = document.querySelector("#btnSideSignup");
 let responsiveFlag = false;
 var slideIndex = 0;
 //console.log(menu);
@@ -21,9 +24,12 @@ overlayButton.addEventListener('click', closeAnnouncement);
 btnFeature1.addEventListener('click', function () {goToFeature('#feature-1')});
 btnFeature2.addEventListener('click', function () {goToFeature('#feature-2')});
 btnSignup.addEventListener('click', function () {goToFeature('#sign-up')});
+btnSideFeature1.addEventListener('click', function () {goToFeature('#feature-1')});
+btnSideFeature2.addEventListener('click', function () {goToFeature('#feature-2')});
+btnSideSignup.addEventListener('click', function () {goToFeature('#sign-up')});
 
 function goToFeature(arg) {
-    console.log("arg");
+    console.log(arg);
     document.querySelector(arg).scrollIntoView({
         behavior: 'smooth',
         block: 'center'
@@ -44,7 +50,7 @@ function menuDisplay(){
 function controlSidebar(){
     if(!responsiveFlag){
         responsiveFlag = true;
-        menu.style.width = '200px';
+        menu.style.width = '150px';
     } else {
         responsiveFlag = false;
         menu.style.width = '0';
