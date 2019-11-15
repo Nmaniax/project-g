@@ -16,7 +16,7 @@ var slideIndex = 0;
 //console.log(menu);
 
 //document.addEventListener('onload', showAnnouncement);
-window.onload = setTimeout(showAnnouncement,2000);
+setTimeout(showAnnouncement,2000);
 showSlides();
 icon.addEventListener('click', controlSidebar);
 iconClose.addEventListener('click', controlSidebar);

@@ -13,13 +13,17 @@
     padding: 0;
     box-sizing: 0;
 }
+
+html {
+    background-color: var(--primary-color);
+}
 /* Page background */
 body {
-    background-image: linear-gradient(
+    /*background-image: linear-gradient(
     var(--background-color-b), var(--background-color), var(--background-color), var(--background-color-b)   
-    );
+    );*/
     background-attachment: fixed;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     /* Sometimes there's a bug when scrolling that shows  the background of
     the background, so I added this extra background-color to make it less 
     ugly */
@@ -34,7 +38,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex: 3;
-    padding-top: 70px;
+    padding-top: 85px;
+    box-shadow: 0px 0px 11px 0px black;
 } 
 
 /* Each section style */
@@ -216,7 +221,7 @@ nav ul li button:hover {
 
 /*--- Columns ---*/
 
-.aside {
+aside {
     width: 8%;
     display: none;
     justify-content: center;
@@ -373,6 +378,7 @@ footer {
     .header .slideshow-container {
         height: 260px;
     }
+
     /*
     .sign-up {
         background-image: none;
@@ -415,6 +421,7 @@ footer {
 /* ---Tablet styles---- */
 
 @media only screen and (min-width: 401px) and (max-width: 960px){
+
     .sign-up,
     .feature-1,
     .feature-2,
@@ -429,6 +436,7 @@ footer {
     .container {
         width: 100%;
     }
+
     .sign-up{
         order: 1;
     }
@@ -495,7 +503,7 @@ footer {
         order: 4;
     }
 
-    .aside{
+    aside{
         display: flex;
     }
 
