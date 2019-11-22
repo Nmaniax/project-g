@@ -70,7 +70,7 @@ function showSlides() {
         slideIndex = 1;
     }
     slides[slideIndex - 1].style.display = 'block';
-    setTimeout(showSlides, 2000); //change image every 2 seconds 
+    setTimeout(showSlides, 5000); //change image every 5 seconds 
 }
 
 function showAnnouncement(){
@@ -78,7 +78,7 @@ function showAnnouncement(){
     var bar = document.querySelector("nav.menu");
     overlay.classList.add('display');
     /*overlay.style.display = "block";*/
-    setTimeout(() => {overlay.style.opacity = 1}, 10);
+    setTimeout(() => {overlay.style.opacity = 1}, 15);
     console.log("showed");
 }
 
