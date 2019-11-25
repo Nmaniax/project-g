@@ -73,6 +73,7 @@ hr {
 .overlay .announcement{
     font-family: 'Anton', sans-serif;
     padding: 8px;
+    letter-spacing: 2px;
     text-decoration: none;
     font-size: 36px;
     color: white;
@@ -83,6 +84,7 @@ hr {
 .overlay img {
     width: 585px;
     height: 740px;
+    transition: .5s;
 }
 
 .overlay .over-close {
@@ -103,7 +105,7 @@ hr {
     height: 100%;
     text-align: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 33px;
 }
 
 .overlay.display {
@@ -327,7 +329,26 @@ footer {
 
 .feature-1 {
     background-color: transparent;
+    align-items: center;
 }
+
+.feature-1 article {
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: #eaeaea;
+    display: block;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.feature-1 p {
+    font-size: 22px;
+}
+
 .contact .feature-1 iframe {
     width: 300px;
     height: 300px;
@@ -378,12 +399,12 @@ footer {
     }
 
     .overlay-content {
-        top: 6%;
+        top: 2%;
     }
 
     .overlay img {
-        width: 410px;
-        height: 540px;
+        width: 350px;
+        height: 460px;
     }
 
     .header{
@@ -443,12 +464,12 @@ footer {
 @media only screen and (min-width: 461px) and (max-width: 960px){
 
     .overlay-content {
-        top: 6%;
+        top: 2%;
     }
 
     .overlay img {
-        width: 590px;
-        height: 705px;
+        width: 440px;
+        height: 520px;
     }
 
     .sign-up,
