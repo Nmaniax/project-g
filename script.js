@@ -59,7 +59,7 @@ function controlSidebar(){
 
 function showSlides() {
     var i;
-    var slides = document.querySelectorAll('figure img');
+    var slides = document.querySelectorAll('.slideshow-container figure img');
     //console.log(slides);
 
     for (i = 0; i < slides.length; i++){
