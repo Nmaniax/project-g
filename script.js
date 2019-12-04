@@ -50,7 +50,7 @@ function menuDisplay(){
 function controlSidebar(){
     if(!responsiveFlag){
         responsiveFlag = true;
-        menu.style.width = '150px';
+        menu.style.width = '170px';
     } else {
         responsiveFlag = false;
         menu.style.width = '0';
