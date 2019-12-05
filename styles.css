@@ -82,9 +82,15 @@ hr {
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     overflow-y: hidden;
-    opacity: 0.1;
+    /*opacity: 1;
     transition-property: opacity, display;
     transition-duration: 2s, 1s;
+    transition: 3s;*/
+}
+
+.overlay.display {
+    display: block;
+    /*opacity: 0.9;*/
 }
 
 .overlay .announcement{
@@ -118,17 +124,14 @@ hr {
 .overlay-content {
     position: relative;
     top: 3%;
-    left: 10%;
-    width: 83%;
+    left: 0%;
+    width: 100%;
     height: 100%;
     text-align: center;
     align-items: center;
     margin-top: 30px;
 }
 
-.overlay.display {
-    display: block;
-}
 
 /* Top navigation bar styles */
 nav.menu{
@@ -150,6 +153,10 @@ nav.sidenav {
     overflow-x: hidden;
     transition: 0.5s;
     box-shadow: 7px -4px 16px -10px black;
+}
+
+nav.sidenav.showed {
+    width: 170px;
 }
 
 /* Style the links inside the navigation bars */
@@ -232,6 +239,7 @@ nav ul {
     width: 100%;
     margin: 0;
     padding: 5px;
+    padding-top: 8px;
     overflow: hidden;
     display: flex;
 }
@@ -336,9 +344,9 @@ footer {
 /* fading animation for the images */
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 3s;
     animation-name: fade;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 
 @-webkit-keyframes fade {
@@ -498,7 +506,7 @@ footer {
     .overlay .announcement{ font-size: 20px}
     .overlay .over-close{
         font-size: 40px;
-        top: 10px;
+        top: 5px;
         right: 35px;
     }
 
@@ -609,6 +617,12 @@ footer {
     .overlay img {
         width: 440px;
         height: 520px;
+    }
+    .overlay .announcement{ font-size: 20px}
+    .overlay .over-close{
+        font-size: 40px;
+        top: 5px;
+        right: 35px;
     }
 
     .sign-up,

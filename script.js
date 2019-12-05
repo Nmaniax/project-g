@@ -11,6 +11,8 @@ const btnSignup = document.querySelector("#btnSignup");
 const btnSideFeature1 = document.querySelector("#btnSideFeature-1");
 const btnSideFeature2 = document.querySelector("#btnSideFeature-2");
 const btnSideSignup = document.querySelector("#btnSideSignup");
+const btnLogo = document.querySelector("#btnLogo");
+const sideBtnLogo = document.querySelector("#side-btnLogo");
 let responsiveFlag = false;
 var slideIndex = 0;
 //console.log(menu);
@@ -27,6 +29,8 @@ btnSignup.addEventListener('click', function () {goToFeature('#sign-up')});
 btnSideFeature1.addEventListener('click', function () {goToFeature('#feature-1')});
 btnSideFeature2.addEventListener('click', function () {goToFeature('#feature-2')});
 btnSideSignup.addEventListener('click', function () {goToFeature('#sign-up')});
+btnLogo.addEventListener('click', function () {goToFeature('header')});
+sideBtnLogo.addEventListener('click', function () {goToFeature('header')});
 
 function goToFeature(arg) {
     console.log(arg);
@@ -50,10 +54,12 @@ function menuDisplay(){
 function controlSidebar(){
     if(!responsiveFlag){
         responsiveFlag = true;
-        menu.style.width = '170px';
+        menu.classList.toggle('showed');
+        //menu.style.width = '170px';
     } else {
         responsiveFlag = false;
-        menu.style.width = '0';
+        menu.classList.toggle('showed');
+        //menu.style.width = '0';
     }
 }
 
@@ -77,8 +83,8 @@ function showAnnouncement(){
     var overlay = document.querySelector(".overlay");
     var bar = document.querySelector("nav.menu");
     overlay.classList.add('display');
-    /*overlay.style.display = "block";*/
-    setTimeout(() => {overlay.style.opacity = 1}, 15);
+    /*overlay.style.display = "block";
+    setTimeout(() => {overlay.style.opacity = 1}, 15);*/
     console.log("showed");
 }
 
