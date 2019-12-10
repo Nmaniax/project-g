@@ -411,6 +411,12 @@ footer {
     padding: 0px 10px;
 }
 
+.sign-up #email-icon {
+    width: 30px;
+    height: 30px;
+    padding: 0px 10px;
+}
+
 .sign-up #social-links a {
     text-decoration: none;
     text-align: center;
@@ -595,7 +601,7 @@ footer {
     }
 
     .feature-1 img {
-        width: 360px;
+        width: 310px;
         height: 330px;
     }
 

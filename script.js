@@ -13,6 +13,8 @@ const btnSideFeature2 = document.querySelector("#btnSideFeature-2");
 const btnSideSignup = document.querySelector("#btnSideSignup");
 const btnLogo = document.querySelector("#btnLogo");
 const sideBtnLogo = document.querySelector("#side-btnLogo");
+const facebookBtn = document.querySelector("#facebook-icon a");
+const instagramBtn = document.querySelector("#instagram-icon a");
 let responsiveFlag = false;
 var slideIndex = 0;
 //console.log(menu);
@@ -31,6 +33,9 @@ btnSideFeature2.addEventListener('click', function () {goToFeature('#feature-2')
 btnSideSignup.addEventListener('click', function () {goToFeature('#sign-up')});
 btnLogo.addEventListener('click', function () {goToFeature('header')});
 sideBtnLogo.addEventListener('click', function () {goToFeature('header')});
+
+//facebookBtn.addEventListener('click', function() {getMobileOperatingSystem('facebook')} )
+
 
 function goToFeature(arg) {
     console.log(arg);
@@ -94,4 +99,17 @@ function closeAnnouncement(){
     var bar = document.querySelector("nav.menu");
     //overlay.style.display = "none";
     overlay.classList.remove('display');
+}
+
+function getMobileOperatingSystem(arg) {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if(/android/i.test(userAgent)){
+        console.log(android);
+    }
+    if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        console.log(android);
+    }
+    
+    console.log(userAgent);
 }
