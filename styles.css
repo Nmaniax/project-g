@@ -417,10 +417,14 @@ footer {
     padding: 0px 10px;
 }
 
-.sign-up #social-links a {
+.sign-up #social-links button {
+    cursor: pointer;
     text-decoration: none;
+    border: none;
+    outline: none;
     text-align: center;
     color: #eaeaea;
+    background: transparent;
     padding: 10px 0px;
     font-size: 20px;
 }

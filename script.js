@@ -13,8 +13,9 @@ const btnSideFeature2 = document.querySelector("#btnSideFeature-2");
 const btnSideSignup = document.querySelector("#btnSideSignup");
 const btnLogo = document.querySelector("#btnLogo");
 const sideBtnLogo = document.querySelector("#side-btnLogo");
-const facebookBtn = document.querySelector("#facebook-icon a");
-const instagramBtn = document.querySelector("#instagram-icon a");
+const facebookBtn = document.querySelector("#facebook-btn");
+const instagramBtn = document.querySelector("#instagram-btn");
+const emailBtn = document.querySelector("#email-btn");
 let responsiveFlag = false;
 var slideIndex = 0;
 //console.log(menu);
@@ -34,7 +35,8 @@ btnSideSignup.addEventListener('click', function () {goToFeature('#sign-up')});
 btnLogo.addEventListener('click', function () {goToFeature('header')});
 sideBtnLogo.addEventListener('click', function () {goToFeature('header')});
 
-//facebookBtn.addEventListener('click', function() {getMobileOperatingSystem('facebook')} )
+facebookBtn.addEventListener('click', function() {getMobileOperatingSystem('facebook')} )
+instagramBtn.addEventListener('click', function() {getMobileOperatingSystem('instagram')} )
 
 
 function goToFeature(arg) {
@@ -104,11 +106,29 @@ function closeAnnouncement(){
 function getMobileOperatingSystem(arg) {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    if(/android/i.test(userAgent)){
-        console.log(android);
+    if(arg == "facebook"){
+        if(/android/i.test(userAgent)){
+            window.location.href = "fb://facewebmodal/f?href=https://www.facebook.com/WolfGymOfficial/"
+        }
+        else if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            window.location.href = "fb://facewebmodal/f?href=https://www.facebook.com/WolfGymOfficial/"
+            console.log("iphone");
+        }
+        else {
+            window.open("https://www.facebook.com/WolfGymOfficial/");
+        }
     }
-    if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        console.log(android);
+    else if(arg == "instagram"){
+        if(/android/i.test(userAgent)){
+            window.location.href = "instagram://user?username=wolfgymofficial"
+            console.log("android");
+        }
+        else if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            window.location.href = "instagram://user?username=wolfgymofficial"
+        }
+        else {
+            window.open("https://www.instagram.com/wolfgymofficial/");
+        }
     }
     
     console.log(userAgent);
