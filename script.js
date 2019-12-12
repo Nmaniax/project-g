@@ -15,7 +15,7 @@ const btnLogo = document.querySelector("#btnLogo");
 const sideBtnLogo = document.querySelector("#side-btnLogo");
 const facebookBtn = document.querySelector("#facebook-btn");
 const instagramBtn = document.querySelector("#instagram-btn");
-const emailBtn = document.querySelector("#email-btn");
+const emailBtn = document.querySelector("#email-button");
 let responsiveFlag = false;
 var slideIndex = 0;
 //console.log(menu);
@@ -37,6 +37,7 @@ sideBtnLogo.addEventListener('click', function () {goToFeature('header')});
 
 facebookBtn.addEventListener('click', function() {getMobileOperatingSystem('facebook')} )
 instagramBtn.addEventListener('click', function() {getMobileOperatingSystem('instagram')} )
+emailBtn.addEventListener('click', function() {getMobileOperatingSystem('email')} )
 
 
 function goToFeature(arg) {
@@ -128,6 +129,18 @@ function getMobileOperatingSystem(arg) {
         }
         else {
             window.open("https://www.instagram.com/wolfgymofficial/");
+        }
+    }
+    else if(arg == "email"){
+        if(/android/i.test(userAgent)){
+            window.location.href = "mailto:gerencia@wolfgym.com.mx"
+            console.log("android");
+        }
+        else if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            window.location.href = "mailto:gerencia@wolfgym.com.mx"
+        }
+        else{
+            window.open("mailto:gerencia@wolfgym.com.mx");
         }
     }
     

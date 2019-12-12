@@ -15,7 +15,7 @@
 }
 
 html {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     /* Sometimes there's a bug when scrolling that shows  the background of
     the background, so I added this extra background-color to make it less 
     ugly */
@@ -56,7 +56,6 @@ body {
     font-family: 'Anton', sans-serif;
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
     letter-spacing: 1px;
     color: #eaeaea;
     text-shadow: -1px 1px 0 #000,
@@ -381,7 +380,7 @@ footer {
     font-family: 'Anton', sans-serif;
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 40px;
     letter-spacing: 1px;
     color: #eaeaea;
     text-shadow: -1px 1px 0 #000,
@@ -397,6 +396,12 @@ footer {
     width: 300px;
     height: 300px;
     border: 10px solid black;
+}
+
+.sign-up #address p{
+    text-align: center;
+    color: #eaeaea;
+    font-size: 22px;
 }
 
 .sign-up #facebook-icon {
@@ -513,7 +518,12 @@ footer {
 /* ----Mobile Styles----- */
 @media only screen and (max-width:460px){
     
-    .overlay .announcement{ font-size: 20px}
+    .overlay .announcement{ 
+        font-size: 20px;
+        width: 50%;
+        margin-left: 22%;
+        
+    }
     .overlay .over-close{
         font-size: 40px;
         top: 5px;
@@ -596,7 +606,7 @@ footer {
     .feature-1.onepage,
     .feature-2.onepage,
     .feature-3.onepage {
-        height: 700px;
+        height: 720px;
         width: 100%;
     }
 
@@ -605,13 +615,21 @@ footer {
     }
 
     .feature-1 img {
-        width: 310px;
+        width: 330px;
         height: 330px;
+    }
+
+    .feature-1 h1 {
+        font-size: 30px;
     }
 
     .feature-1 p {
         font-size: 22px;
         padding: 10px;
+    }
+
+    .sign-up.onepage {
+        height: 800px;
     }
 
 }
@@ -621,16 +639,22 @@ footer {
 @media only screen and (min-width: 461px) and (max-width: 960px){
 
     .overlay-content {
-        top: 2%;
+        top: 3%;
     }
 
     .overlay img {
-        width: 440px;
-        height: 520px;
+        width: 600px;
+        height: 740px;
     }
-    .overlay .announcement{ font-size: 20px}
+
+    .overlay .announcement{ 
+        font-size: 34px;
+        width: 50%;
+        margin-left: 24%;
+    }
+
     .overlay .over-close{
-        font-size: 40px;
+        font-size: 50px;
         top: 5px;
         right: 35px;
     }
@@ -643,7 +667,7 @@ footer {
     }
 
     .header{
-        height: 400px;
+        height: 500px;
     }
 
     .header .slideshow-container {
@@ -659,6 +683,7 @@ footer {
     .sign-up{
         order: 1;
     }
+
     nav.menu {
         justify-content: left;
         padding-left: 0;
@@ -702,7 +727,7 @@ footer {
     .feature-1.onepage,
     .feature-2.onepage,
     .feature-3.onepage {
-        height: 600px;
+        height: 780px;
         width: 100%;
     }
 
@@ -711,13 +736,30 @@ footer {
     }
 
     .feature-1 img {
-        width: 300px;
-        height: 295px;
+        width: 490px;
+        height: 448px;
+    }
+
+    .feature-1 h1 {
+        font-size: 40px;
     }
 
     .feature-1 p {
-        font-size: 22px;
-        padding: 10px;
+        font-size: 26px;
+        padding: 5px;
+    }
+
+    .sign-up.onepage {
+        height: 850px;
+    }
+
+    .sign-up.onepage iframe {
+        width: 500px;
+        height: 380px;
+        border: 8px solid black;
+    }
+    .sign-up #social-links button {
+        font-size: 30px;
     }
 }
 
