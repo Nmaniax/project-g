@@ -15,7 +15,7 @@
 }
 
 html {
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
     /* Sometimes there's a bug when scrolling that shows  the background of
     the background, so I added this extra background-color to make it less 
     ugly */
@@ -79,9 +79,9 @@ hr {
     position: fixed;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
+    /*overflow-x: hidden;
     overflow-y: hidden;
-    /*opacity: 1;
+    opacity: 1;
     transition-property: opacity, display;
     transition-duration: 2s, 1s;
     transition: 3s;*/
@@ -100,12 +100,14 @@ hr {
     font-size: 36px;
     color: white;
     display: block;
+    width: 50%;
+    margin-left: 25%;
     transition: 0.5s;
 }
 
 .overlay img {
-    width: 575px;
-    height: 720px;
+    width: 615px;
+    height: 810px;
     transition: .5s;
 }
 
@@ -114,7 +116,7 @@ hr {
     cursor: pointer;
     top: 15px;
     left: 25px;
-    font-size: 40px;
+    font-size: 55px;
     color: white;
     background-color: transparent;
     border: none;
@@ -122,7 +124,7 @@ hr {
 
 .overlay-content {
     position: relative;
-    top: 3%;
+    top: 5%;
     left: 0%;
     width: 100%;
     height: 100%;
@@ -393,9 +395,14 @@ footer {
 }
 
 .sign-up.onepage iframe {
-    width: 300px;
-    height: 300px;
+    width: 580px;
+    height: 460px;
     border: 10px solid black;
+}
+
+.sign-up.onepage img {
+    width: 580px;
+    height: 460px;
 }
 
 .sign-up #address p{
@@ -516,18 +523,20 @@ footer {
 }
 
 /* ----Mobile Styles----- */
+/* ----Mobile Styles----- */
+/* ----Mobile Styles----- */
 @media only screen and (max-width:460px){
     
     .overlay .announcement{ 
-        font-size: 20px;
+        font-size: 17px;
         width: 50%;
         margin-left: 22%;
         
     }
     .overlay .over-close{
-        font-size: 40px;
+        font-size: 37px;
         top: 5px;
-        right: 35px;
+        left: 17px;
     }
 
     .overlay-content {
@@ -535,8 +544,8 @@ footer {
     }
 
     .overlay img {
-        width: 350px;
-        height: 460px;
+        width: 330px;
+        height: 425px;
     }
 
     .header{
@@ -615,7 +624,7 @@ footer {
     }
 
     .feature-1 img {
-        width: 330px;
+        width: 270px;
         height: 330px;
     }
 
@@ -629,7 +638,17 @@ footer {
     }
 
     .sign-up.onepage {
-        height: 800px;
+        height: 950px;
+    }
+
+    .sign-up.onepage iframe {
+        width: 280px;
+        height: 300px;
+        border: 8px solid black;
+    }
+    .sign-up.onepage img {
+        width: 280px;
+        height: 300px;
     }
 
 }
@@ -758,6 +777,11 @@ footer {
         height: 380px;
         border: 8px solid black;
     }
+
+    .sign-up.onepage img {
+        width: 500px;
+        height: 380px;
+    }
     .sign-up #social-links button {
         font-size: 30px;
     }
@@ -832,5 +856,13 @@ footer {
     .feature-3.onepage {
         height: 600px;
         width: 100%;
+    }
+
+    .sign-up.onepage {
+        height: 950px;
+    }
+
+    .feature-1 h1 {
+        font-size: 30px;
     }
 }
