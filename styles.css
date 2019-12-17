@@ -106,8 +106,8 @@ hr {
 }
 
 .overlay img {
-    width: 615px;
-    height: 810px;
+    width: 500px;
+    height: 670px;
     transition: .5s;
 }
 
@@ -120,11 +120,16 @@ hr {
     color: white;
     background-color: transparent;
     border: none;
+    width: 56px;
+}
+
+.overlay.display button:hover{
+    background-color: #5e5e5e;
 }
 
 .overlay-content {
     position: relative;
-    top: 5%;
+    top: 4%;
     left: 0%;
     width: 100%;
     height: 100%;
@@ -405,7 +410,8 @@ footer {
     height: 460px;
 }
 
-.sign-up #address p{
+.sign-up #address p,
+.sign-up #address a{
     text-align: center;
     color: #eaeaea;
     font-size: 22px;
@@ -439,6 +445,11 @@ footer {
     background: transparent;
     padding: 10px 0px;
     font-size: 20px;
+}
+
+.sign-up #social-links button:hover,
+.sign-up #address a:hover {
+    background-color: var(--background-color-b);
 }
 
 .feature-1 {
@@ -482,6 +493,14 @@ footer {
 
 .feature-2 {
     background-color: transparent;
+    align-items: center;
+}
+
+.feature-2 img {
+    width: 450px;
+    height: 650px;
+    margin: 15px;
+    box-shadow: 9px 12px 20px 0px black;
 }
 
 .feature-3 {
@@ -537,6 +556,7 @@ footer {
         font-size: 37px;
         top: 5px;
         left: 17px;
+        width: 36px;
     }
 
     .overlay-content {
@@ -544,8 +564,8 @@ footer {
     }
 
     .overlay img {
-        width: 330px;
-        height: 425px;
+        width: 315px;
+        height: 410px;
     }
 
     .header{
@@ -637,6 +657,19 @@ footer {
         padding: 10px;
     }
 
+    .feature-2.onepage{
+        height: 650px;
+    }
+
+    .feature-2 h1 {
+        font-size: 30px;
+    }
+
+    .feature-2 img {
+        width: 270px;
+        height: 440px;
+    }
+
     .sign-up.onepage {
         height: 950px;
     }
@@ -653,6 +686,8 @@ footer {
 
 }
 
+/* ---Tablet styles---- */
+/* ---Tablet styles---- */
 /* ---Tablet styles---- */
 
 @media only screen and (min-width: 461px) and (max-width: 960px){
@@ -768,6 +803,15 @@ footer {
         padding: 5px;
     }
 
+    .feature-2 img {
+        width: 490px;
+        height: 655px;
+    }
+
+    .feature-2 h1 {
+        font-size: 40px;
+    }
+
     .sign-up.onepage {
         height: 850px;
     }
@@ -787,6 +831,8 @@ footer {
     }
 }
 
+/* ---Desktop Styles--- */
+/* ---Desktop Styles--- */
 /* ---Desktop Styles--- */
 
 @media only screen and (min-width: 961px){
@@ -854,7 +900,7 @@ footer {
     .feature-1.onepage,
     .feature-2.onepage,
     .feature-3.onepage {
-        height: 600px;
+        height: 640px;
         width: 100%;
     }
 
@@ -863,6 +909,14 @@ footer {
     }
 
     .feature-1 h1 {
-        font-size: 30px;
+        font-size: 40px;
+    }
+    
+    .feature-2 h1 {
+        font-size: 40px;
+    }
+
+    .feature-2.onepage {
+        height: 850px;
     }
 }
