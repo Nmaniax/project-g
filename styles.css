@@ -114,7 +114,7 @@ hr {
 .overlay .over-close {
     position: absolute;
     cursor: pointer;
-    top: 15px;
+    top: 0px;
     left: 25px;
     font-size: 55px;
     color: white;
@@ -129,13 +129,13 @@ hr {
 
 .overlay-content {
     position: relative;
-    top: 4%;
-    left: 0%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     text-align: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 
@@ -222,7 +222,7 @@ nav .icon {
     cursor: pointer;
     align-self: flex-start;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 16px;
     text-decoration: none;
     font-size: 25px;
     font-family: 'helvetica neue', sans-serif ;
@@ -554,8 +554,8 @@ footer {
     }
     .overlay .over-close{
         font-size: 37px;
-        top: 5px;
-        left: 17px;
+        top: -7px;
+        left: 10px;
         width: 36px;
     }
 
@@ -709,7 +709,7 @@ footer {
 
     .overlay .over-close{
         font-size: 50px;
-        top: 5px;
+        top: -10px;
         right: 35px;
     }
 

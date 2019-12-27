@@ -99,8 +99,6 @@ function showAnnouncement(){
 
 function closeAnnouncement(){
     var overlay = document.querySelector(".overlay");
-    var bar = document.querySelector("nav.menu");
-    //overlay.style.display = "none";
     overlay.classList.remove('display');
 }
 
