@@ -685,7 +685,7 @@ footer {
     }
 
     .sign-up.onepage {
-        height: 1040px;
+        height: 1100px;
     }
 
     .sign-up.onepage iframe {
@@ -709,6 +709,7 @@ footer {
 
 @media only screen and (min-width: 461px) and (max-width: 960px){
 
+    
     .overlay-content {
         top: 3%;
     }
@@ -826,7 +827,7 @@ footer {
     }
 
     .feature-2.onepage {
-        height: 2180px;
+        height: 2220px;
     }
 
     .feature-2 img {
@@ -839,7 +840,7 @@ footer {
     }
 
     .sign-up.onepage {
-        height: 1040px;
+        height: 1100px;
     }
 
     .sign-up.onepage iframe {
