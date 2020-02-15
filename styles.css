@@ -106,7 +106,7 @@ hr {
 }
 
 .overlay img {
-    width: 500px;
+    width: 600px;
     height: 670px;
     transition: .5s;
 }
@@ -120,7 +120,7 @@ hr {
     color: white;
     background-color: transparent;
     border: none;
-    width: 56px;
+    width: 75px;
 }
 
 .overlay.display button:hover{
@@ -136,6 +136,7 @@ hr {
     text-align: center;
     align-items: center;
     margin-top: 15px;
+    overflow: scroll;
 }
 
 
@@ -410,6 +411,10 @@ footer {
     height: 460px;
 }
 
+.sign-up #schedule p {
+    font-size: 22px;
+}
+
 .sign-up #address p,
 .sign-up #address a{
     text-align: center;
@@ -496,8 +501,12 @@ footer {
     align-items: center;
 }
 
+.feature-2 p {
+    font-size: 22px;
+    padding: 10px;
+}
 .feature-2 img {
-    width: 450px;
+    width: 600px;
     height: 650px;
     margin: 15px;
     box-shadow: 9px 12px 20px 0px black;
@@ -547,16 +556,16 @@ footer {
 @media only screen and (max-width:460px){
     
     .overlay .announcement{ 
-        font-size: 17px;
+        font-size: 16px;
         width: 50%;
         margin-left: 22%;
         
     }
     .overlay .over-close{
         font-size: 37px;
-        top: -18px;
+        top: -10px;
         left: 10px;
-        width: 36px;
+        width: 50px;
     }
 
     .overlay-content {
@@ -564,8 +573,8 @@ footer {
     }
 
     .overlay img {
-        width: 315px;
-        height: 410px;
+        width: 300px;
+        height: 380px;
     }
 
     .header{
@@ -658,7 +667,7 @@ footer {
     }
 
     .feature-2.onepage{
-        height: 650px;
+        height: 1400px;
     }
 
     .feature-2 h1 {
@@ -666,12 +675,17 @@ footer {
     }
 
     .feature-2 img {
-        width: 270px;
-        height: 440px;
+        width: 290px;
+        height: 380px;
+    }
+
+    .feature-2 p {
+        font-size: 22px;
+        padding: 10px;
     }
 
     .sign-up.onepage {
-        height: 970px;
+        height: 1040px;
     }
 
     .sign-up.onepage iframe {
@@ -679,11 +693,14 @@ footer {
         height: 300px;
         border: 8px solid black;
     }
-    .sign-up.onepage img {
+    .sign-up.onepage #address img {
         width: 280px;
         height: 300px;
     }
-
+    
+    .sign-up.onepage #schedule p {
+        font-size: 24px;
+    }
 }
 
 /* ---Tablet styles---- */
@@ -709,7 +726,7 @@ footer {
 
     .overlay .over-close{
         font-size: 50px;
-        top: -18px;
+        top: -15px;
         right: 35px;
     }
 
@@ -802,6 +819,15 @@ footer {
         font-size: 26px;
         padding: 5px;
     }
+    
+    .feature-2 p {
+        font-size: 26px;
+        padding: 5px;
+    }
+
+    .feature-2.onepage {
+        height: 2180px;
+    }
 
     .feature-2 img {
         width: 490px;
@@ -813,7 +839,7 @@ footer {
     }
 
     .sign-up.onepage {
-        height: 850px;
+        height: 1040px;
     }
 
     .sign-up.onepage iframe {
@@ -827,6 +853,9 @@ footer {
         height: 380px;
     }
     .sign-up #social-links button {
+        font-size: 30px;
+    }
+    .sign-up.onepage #schedule p {
         font-size: 30px;
     }
 }
@@ -905,7 +934,7 @@ footer {
     }
 
     .sign-up.onepage {
-        height: 950px;
+        height: 1050px;
     }
 
     .feature-1 h1 {
@@ -917,6 +946,6 @@ footer {
     }
 
     .feature-2.onepage {
-        height: 850px;
+        height: 2180px;
     }
 }
