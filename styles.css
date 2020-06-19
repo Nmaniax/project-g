@@ -114,13 +114,14 @@ hr {
 .overlay .over-close {
     position: absolute;
     cursor: pointer;
-    top: 0px;
+    top: -5px;
     left: 25px;
     font-size: 55px;
     color: white;
     background-color: transparent;
     border: none;
     width: 75px;
+    height: 78px;
 }
 
 .overlay.display button:hover{
@@ -316,14 +317,23 @@ footer {
 /* Slide show for images */
 .header .slideshow-container {
     display: flex;
-    max-width: 700px;
+    /*max-width: 700px;
+    max-height: 900px;*/
+    max-width: 820px;
     max-height: 900px;
     position: relative;
     margin: auto;
     background-color: #07020D;
-    height: 470px;
+    /*height: 470px;
+    width: 870px;*/
+    height: 325px;
     width: 870px;
 
+}
+
+#next-opening {
+    width: 100%;
+    height: 100%;
 }
 
 .header figure img {
@@ -490,6 +500,14 @@ footer {
     box-shadow: 9px 12px 20px 0px black;
 }
 
+.feature-1 video {
+    width: 718px;
+    height: 395px;
+    margin: 15px;
+    box-shadow: 9px 12px 20px 0px black;
+    background-color: black;
+}
+
 .feature-1 p {
     font-size: 22px;
     padding: 10px;
@@ -563,7 +581,7 @@ footer {
     }
     .overlay .over-close{
         font-size: 37px;
-        top: -10px;
+        top: -9px;
         left: 10px;
         width: 50px;
     }
@@ -585,8 +603,14 @@ footer {
         order: 1;
     }
 
-    .header .slideshow-container {
+    #next-opening {
+        width: 100%;
         height: 100%;
+    }
+
+    .header .slideshow-container {
+        /*height: 100%*/
+        height: 68%;
         width: 100%;
     }
 
@@ -655,6 +679,11 @@ footer {
     .feature-1 img {
         width: 270px;
         height: 300px;
+    }
+
+    .feature-1 video {
+        width: 360px;
+        height: 198px;
     }
 
     .feature-1 h1 {
@@ -727,7 +756,7 @@ footer {
 
     .overlay .over-close{
         font-size: 50px;
-        top: -15px;
+        top: -5px;
         right: 35px;
     }
 
@@ -742,9 +771,17 @@ footer {
         height: 500px;
     }
 
-    .header .slideshow-container {
+    #next-opening {
+        width: 100%;
         height: 100%;
-        width: 80%;
+    }
+    
+    .header .slideshow-container {
+        /*height: 100%;
+        width: 80%;*/
+        height: 80%;
+        width: 100%;
+
     }
 
 
@@ -810,6 +847,11 @@ footer {
     .feature-1 img {
         width: 490px;
         height: 448px;
+    }
+
+    .feature-1 video {
+        width: 702px;
+        height: 386px;
     }
 
     .feature-1 h1 {
