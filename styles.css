@@ -611,7 +611,7 @@ footer {
     .header .slideshow-container {
         /*height: 100%*/
         height: 68%;
-        width: 95%;
+        width: 100%;
     }
 
     li {
@@ -682,8 +682,8 @@ footer {
     }
 
     .feature-1 video {
-        width: 360px;
-        height: 198px;
+        width: 340px;
+        height: 188px;
     }
 
     .feature-1 h1 {
