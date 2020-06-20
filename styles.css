@@ -1,11 +1,13 @@
 
 /* Variable settings */
 :root {
-    --primary-color: #4082A2;
-    --secundary-color: #0E2943;
-    --background-color: #C67804;
-    --background-color-b: #944506;
+    --primary-color: #096786;
+    --secundary-color: #01143f;
+    --background-color: #04060a;
+    --background-color-b: #0E131F;
     --active-color: #99C24D;
+    --shadow-color: #04060A:
+
 }
 /* General settings */
 * {
@@ -68,7 +70,7 @@ body {
 }
 
 hr {
-    border: 3px solid #b57311;
+    border: 3px solid var(--background-color-b);
 }
 
 /* Overlay styles */
@@ -278,7 +280,7 @@ nav ul li button {
 
 nav ul li a:hover,
 nav ul li button:hover {
-    background-color: #84bbee;
+    background-color: #0b7599;
 }
 
 /*--- Columns ---*/
@@ -350,7 +352,7 @@ footer {
     width: 100%;
     height: 100%;
     margin: 0;
-    box-shadow: 6px 7px 10px 1px #311d01;
+    box-shadow: 6px 7px 10px 1px rgb(var(--shadow-color));
 }
 
 .header .join-banner {
