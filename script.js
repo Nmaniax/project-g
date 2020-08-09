@@ -16,13 +16,17 @@ const sideBtnLogo = document.querySelector("#side-btnLogo");
 const facebookBtn = document.querySelector("#facebook-btn");
 const instagramBtn = document.querySelector("#instagram-btn");
 const emailBtn = document.querySelector("#email-button");
+const promoNextSlideBtn = document.querySelector("#nextBtn");
+const promoPrevSlideBtn = document.querySelector("#prevBtn");
 let responsiveFlag = false;
 var slideIndex = 0;
+var promoSlideIndex = 1;
 //console.log(menu);
 
 //document.addEventListener('onload', showAnnouncement);
 setTimeout(showAnnouncement,2000);
 showSlides();
+showPromoSlides(promoSlideIndex);
 icon.addEventListener('click', controlSidebar);
 iconClose.addEventListener('click', controlSidebar);
 overlayButton.addEventListener('click', closeAnnouncement);
@@ -34,6 +38,9 @@ btnSideFeature2.addEventListener('click', function () {goToFeature('#feature-2')
 btnSideSignup.addEventListener('click', function () {goToFeature('#sign-up')});
 btnLogo.addEventListener('click', function () {goToFeature('header')});
 sideBtnLogo.addEventListener('click', function () {goToFeature('header')});
+
+promoNextSlideBtn.addEventListener('click', function() {showPromoSlides(promoSlideIndex += 1)} )
+promoPrevSlideBtn.addEventListener('click', function() {showPromoSlides(promoSlideIndex -= 1)} )
 
 facebookBtn.addEventListener('click', function() {getMobileOperatingSystem('facebook')} )
 instagramBtn.addEventListener('click', function() {getMobileOperatingSystem('instagram')} )
@@ -85,6 +92,23 @@ function showSlides() {
     }
     slides[slideIndex - 1].style.display = 'block';
     setTimeout(showSlides, 5000); //change image every 5 seconds 
+}
+
+function showPromoSlides(n) {
+    var i;
+    var slides = document.querySelectorAll('.promo-slider figure img');
+    //console.log(n);
+
+    if (n > slides.length) {
+        promoSlideIndex = 1;
+    }
+    if (n < 1) {
+        promoSlideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display = 'none';
+    }
+    slides[promoSlideIndex - 1].style.display = 'block';
 }
 
 function showAnnouncement(){
