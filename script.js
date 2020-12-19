@@ -116,8 +116,8 @@ function showAnnouncement(){
     var bar = document.querySelector("nav.menu");
     overlay.classList.add('display');
     /*overlay.style.display = "block";
-    setTimeout(() => {overlay.style.opacity = 1}, 15);*/
-    console.log("showed");
+    setTimeout(() => {overlay.style.opacity = 1}, 15);
+    console.log("showed");*/
 }
 
 
